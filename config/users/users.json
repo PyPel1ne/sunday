@@ -1,0 +1,20 @@
+{
+    "roles":{
+        "admin":[
+            {
+                "username": "admin",
+                "password": "admin"
+            },
+            {
+                "username": "Dominik",
+                "password": "admin"
+            }
+        ],
+        "view":[
+            {
+                "username": "david",
+                "password": "david"
+            }
+        ]
+    }
+}

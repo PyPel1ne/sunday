@@ -1,0 +1,2 @@
+Here is default dashboard, that will occur after logging in. In no time there will be
+basic and most important information about HDAP but now screw it, who cares.
