@@ -9,7 +9,7 @@ from view.components.button.button import Button_Component
 from view.components.frame.frame import Frame_Component
 
 from view.dashboards.data_dashboards import New_Data_Source_Dashboard, Change_Data_Source_Dashboard, Create_Dashboard
-from view.dashboards.system_dashboards import *
+
 
 
 class Menu_Widget:
@@ -25,7 +25,7 @@ class Menu_Widget:
         self.button_image = ImageTk.PhotoImage(self.image)
 
     def menu_button_pushed(self, old_frame, window_width, return_value, frame, main_frame, top_frame, previous = ""):
-        
+        from view.dashboards.system_dashboards import Welcome_Dashboard
         if return_value == 'Back button':
             old_frame.destroy()
             newMenu = self.main_menu_widget(frame, window_width, role_, main_frame, top_frame)
@@ -59,7 +59,8 @@ class Menu_Widget:
             button = (self.button.menu_button(new_menu_frame, 'Data loading', x, y, lambda: perform_command(new_menu_frame, window_width, "Data loading", original_frame, main_frame, top_frame), window_width))
             button = (self.button.menu_button(new_menu_frame, 'Create dashboard', x, y + 0.05, lambda: perform_command(new_menu_frame, window_width, "Create dashboard", original_frame, main_frame, top_frame), window_width))
             button = (self.button.menu_button(new_menu_frame, 'Data dashboards', x, y + 0.1, lambda: perform_command(new_menu_frame, window_width, "Data dashboards", original_frame, main_frame, top_frame), window_width))
-            button = (self.button.menu_button(new_menu_frame, 'About', x, y + 0.15, lambda: perform_command(new_menu_frame, window_width, "About", original_frame, main_frame, top_frame), window_width))
+            button = (self.button.menu_button(new_menu_frame, 'OPC Server', x, y + 0.15, lambda: perform_command(new_menu_frame, window_width, "OPC Server", original_frame, main_frame, top_frame), window_width))
+            button = (self.button.menu_button(new_menu_frame, 'About', x, y + 0.20, lambda: perform_command(new_menu_frame, window_width, "About", original_frame, main_frame, top_frame), window_width))
         if role_ == 'view':
             button = (self.button.menu_button(new_menu_frame, 'Data dashboards', x, y, lambda: perform_command(original_frame, window_width, main_frame, top_frame), window_width))
             button = (self.button.menu_button(new_menu_frame, 'About', x, y, lambda: perform_command(original_frame, window_width, main_frame, top_frame), window_width))
