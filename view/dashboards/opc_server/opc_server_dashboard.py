@@ -2,7 +2,7 @@ from functools import partial
 from tkinter import *
 from tkinter import ttk
 import tkinter.messagebox
-
+import json
 #Backend controller
 from app.controllers.opc_server import *
 
